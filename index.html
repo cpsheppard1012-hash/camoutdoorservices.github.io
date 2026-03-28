@@ -12,7 +12,9 @@
   .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #e5e5e5; }
   .nav-logo { font-size: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
   .nav-sub { font-size: 11px; color: #888; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
-  .nav-quote { font-size: 13px; color: #888; cursor: pointer; }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-link { font-size: 13px; color: #888; cursor: pointer; }
+  .nav-link:hover { color: #111; }
 
   .hero { display: flex; flex-direction: column; align-items: center; padding: 48px 40px 40px; border-bottom: 1px solid #e5e5e5; text-align: center; }
   .hero-tag { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 12px; }
@@ -23,6 +25,10 @@
 
   .ebike-strip { padding: 14px 40px; border-bottom: 1px solid #e5e5e5; background: #f9f9f9; text-align: center; font-size: 13px; color: #666; }
   .ebike-strip strong { color: #111; }
+
+  .equipment-banner { padding: 20px 40px; background: #111; text-align: center; }
+  .equipment-banner p { font-size: 14px; color: #fff; line-height: 1.6; }
+  .equipment-banner strong { color: #f5c518; }
 
   .seasons-header { padding: 40px 40px 20px; text-align: center; }
   .seasons-header p { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; }
@@ -45,7 +51,6 @@
   .season-name { font-size: 20px; font-weight: 600; margin-bottom: 6px; }
   .season-tagline { font-size: 13px; color: #666; line-height: 1.5; }
   .season-link { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
-
   .color-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-bottom: 8px; }
   .color-name { font-size: 20px; font-weight: 600; color: #fff; margin-bottom: 6px; }
   .color-tagline { font-size: 13px; color: rgba(255,255,255,0.9); line-height: 1.5; }
@@ -78,6 +83,9 @@
   .sub-title { font-size: 36px; font-weight: 600; margin-bottom: 10px; }
   .sub-desc { font-size: 15px; color: #666; max-width: 480px; line-height: 1.6; }
 
+  .sub-equipment-notice { margin: 24px 40px 0; padding: 16px 20px; background: #fff8e1; border: 1px solid #f5c518; border-radius: 10px; font-size: 14px; color: #7a6000; line-height: 1.6; }
+  .sub-equipment-notice strong { color: #111; }
+
   .est-wrap { padding: 32px 40px; }
   .est-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 12px; }
   .size-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 20px; }
@@ -108,8 +116,19 @@
   .more-row:last-child { border-bottom: none; }
   .mr-l { color: #888; flex-shrink: 0; }
   .mr-r { color: #111; font-weight: 500; text-align: right; }
-
   .sub-foot { font-size: 12px; color: #888; padding: 0 40px 32px; line-height: 1.6; }
+
+  .contact-page { padding: 60px 40px; max-width: 600px; margin: 0 auto; }
+  .contact-page h2 { font-size: 32px; font-weight: 600; margin-bottom: 12px; }
+  .contact-page p { font-size: 15px; color: #666; line-height: 1.6; margin-bottom: 32px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+  .contact-card { padding: 24px; border: 1px solid #e5e5e5; border-radius: 12px; text-align: center; }
+  .contact-card-icon { font-size: 28px; margin-bottom: 12px; display: block; }
+  .contact-card-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  .contact-card-text { font-size: 13px; color: #666; margin-bottom: 16px; line-height: 1.5; }
+  .contact-card-btn { display: inline-block; padding: 10px 20px; border: 1px solid #111; border-radius: 8px; font-size: 13px; cursor: pointer; background: transparent; }
+  .contact-card-btn:hover { background: #f5f5f5; }
+  .contact-notice { padding: 20px; background: #f9f9f9; border-radius: 10px; font-size: 14px; color: #666; line-height: 1.6; text-align: center; }
 
   @media (max-width: 700px) {
     .nav { padding: 16px 20px; }
@@ -119,11 +138,14 @@
     .season-card { min-height: 200px; }
     .info-grid { grid-template-columns: 1fr; }
     .est-wrap { padding: 24px 20px; }
-    .size-row { grid-template-columns: 1fr 1fr 1fr; }
     .sub-hero { padding: 32px 20px 24px; }
     .subpage-nav { padding: 16px 20px; }
     .info-section { padding: 32px 20px; }
     .footer { padding: 20px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-page { padding: 32px 20px; }
+    .equipment-banner { padding: 16px 20px; }
+    .sub-equipment-notice { margin: 16px 20px 0; }
   }
 </style>
 </head>
@@ -135,27 +157,37 @@
       <div class="nav-logo">Cam Outdoor Services</div>
       <div class="nav-sub">Tinley Park, IL</div>
     </div>
-    <a href="https://instagram.com/cams_outdoor_services" target="_blank"><div class="nav-quote">Get a free quote</div></a>
+    <div class="nav-links">
+      <span class="nav-link" onclick="showSub('contact')">Contact</span>
+      <a href="https://instagram.com/cams_outdoor_services" target="_blank"><span class="nav-link">Get a free quote</span></a>
+    </div>
   </nav>
 
   <section class="hero">
-    <div style="margin-bottom:24px;">
-      <svg width="110" height="160" viewBox="0 0 110 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="55" cy="28" r="22" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
-        <rect x="28" y="18" width="54" height="14" rx="7" fill="#111" opacity="0.85"/>
-        <ellipse cx="43" cy="25" rx="5" ry="3.5" fill="#fff" opacity="0.9"/>
-        <ellipse cx="67" cy="25" rx="5" ry="3.5" fill="#fff" opacity="0.9"/>
-        <ellipse cx="43" cy="25" rx="3" ry="2.5" fill="#111" opacity="0.5"/>
-        <ellipse cx="67" cy="25" rx="3" ry="2.5" fill="#111" opacity="0.5"/>
-        <rect x="32" y="50" width="46" height="58" rx="10" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
-        <rect x="36" y="58" width="38" height="4" rx="2" fill="#ccc"/>
-        <rect x="36" y="66" width="28" height="4" rx="2" fill="#ccc"/>
-        <rect x="18" y="54" width="14" height="38" rx="7" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
-        <rect x="78" y="54" width="14" height="38" rx="7" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
-        <rect x="36" y="108" width="16" height="44" rx="8" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
-        <rect x="58" y="108" width="16" height="44" rx="8" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
-        <rect x="32" y="108" width="12" height="6" rx="2" fill="#bbb"/>
-        <rect x="66" y="108" width="12" height="6" rx="2" fill="#bbb"/>
+    <div style="margin-bottom: 28px;">
+      <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- LAWNMOWER -->
+        <rect x="8" y="58" width="70" height="34" rx="9" fill="#f0f0f0" stroke="#111" stroke-width="2"/>
+        <circle cx="22" cy="96" r="11" fill="#fff" stroke="#111" stroke-width="2"/>
+        <circle cx="66" cy="96" r="11" fill="#fff" stroke="#111" stroke-width="2"/>
+        <circle cx="22" cy="96" r="4.5" fill="#111"/>
+        <circle cx="66" cy="96" r="4.5" fill="#111"/>
+        <rect x="55" y="32" width="7" height="30" rx="3.5" fill="#111"/>
+        <rect x="48" y="26" width="21" height="11" rx="5.5" fill="#111"/>
+        <rect x="18" y="65" width="30" height="7" rx="3" fill="#ccc"/>
+        <rect x="18" y="74" width="20" height="5" rx="2" fill="#bbb"/>
+        <!-- RAKE -->
+        <rect x="108" y="8" width="6" height="82" rx="3" fill="#8B5E3C" stroke="#6b4423" stroke-width="1"/>
+        <rect x="94" y="86" width="34" height="6" rx="3" fill="#444"/>
+        <rect x="95" y="92" width="4" height="14" rx="2" fill="#444"/>
+        <rect x="103" y="92" width="4" height="14" rx="2" fill="#444"/>
+        <rect x="111" y="92" width="4" height="14" rx="2" fill="#444"/>
+        <rect x="119" y="92" width="4" height="14" rx="2" fill="#444"/>
+        <!-- SHOVEL -->
+        <rect x="158" y="6" width="6" height="74" rx="3" fill="#8B5E3C" stroke="#6b4423" stroke-width="1"/>
+        <rect x="152" y="72" width="18" height="8" rx="3" fill="#999"/>
+        <path d="M152 80 Q143 90 143 100 Q143 116 161 118 Q179 116 179 100 Q179 90 170 80 Z" fill="#e0e0e0" stroke="#111" stroke-width="2"/>
+        <rect x="153" y="78" width="16" height="6" rx="2" fill="#ccc"/>
       </svg>
     </div>
     <div class="hero-tag">Professional yard & outdoor care</div>
@@ -166,6 +198,10 @@
 
   <div class="ebike-strip">
     <strong>Local & eco-friendly.</strong> I ride to every job by e-bike — no gas, no hassle, always on time.
+  </div>
+
+  <div class="equipment-banner">
+    <p><strong>Important:</strong> For lawn mowing, you must provide your own mower and grass equipment. No equipment = no service at this time. Please reach out before booking. Raking and shoveling tools are provided by me — extra tools are appreciated but never required.</p>
   </div>
 
   <div class="seasons-header">
@@ -193,7 +229,6 @@
         <div class="color-link">Tap to explore →</div>
       </div>
     </div>
-
     <div class="season-card" onclick="showSub('fall')">
       <div class="card-bw">
         <div>
@@ -213,7 +248,6 @@
         <div class="color-link">Tap to explore →</div>
       </div>
     </div>
-
     <div class="season-card" onclick="showSub('winter')">
       <div class="card-bw">
         <div>
@@ -274,6 +308,9 @@
     <h2 class="sub-title">Cuts by Cam</h2>
     <p class="sub-desc">Keep your lawn sharp all season. Professional mowing and yard care — I ride to every job by e-bike.</p>
   </div>
+  <div class="sub-equipment-notice">
+    <strong>Equipment required:</strong> You must provide your own mower and lawn equipment. Please reach out before booking to confirm. No equipment available = no service at this time.
+  </div>
   <div class="est-wrap">
     <div class="est-label">Choose your yard size</div>
     <div class="size-row">
@@ -318,6 +355,9 @@
     <h2 class="sub-title">Rakes by Cam</h2>
     <p class="sub-desc">Don't let fall leaves take over. Full cleanup and winter prep so your yard is ready for the cold.</p>
   </div>
+  <div class="sub-equipment-notice">
+    <strong>Equipment:</strong> I bring my own rake. If you have extra yard tools, it's appreciated but never required.
+  </div>
   <div class="est-wrap">
     <div class="est-label">Choose your yard size</div>
     <div class="size-row">
@@ -340,7 +380,7 @@
         </div>
         <button class="more-btn" onclick="toggleMore('f-more','f-arr','f-lbl')"><span id="f-arr">▸</span> <span id="f-lbl">More details</span></button>
         <div class="more-panel" id="f-more">
-          <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">I bring my own rake. If you have extra yard tools, it's appreciated but not required.</span></div>
+          <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">I bring my own rake. Extra tools appreciated but not required.</span></div>
           <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
           <div class="more-row"><span class="mr-l">Cancellation</span><span class="mr-r">Cancel anytime — no contracts, no fees.</span></div>
           <div class="more-row"><span class="mr-l">Who am I?</span><span class="mr-r">A 13-year-old Tinley Park entrepreneur. I ride to every job by e-bike and take pride in doing the work right.</span></div>
@@ -361,6 +401,9 @@
     <div class="sub-tag">Winter</div>
     <h2 class="sub-title">Clear by Cam</h2>
     <p class="sub-desc">Tinley Park winters are no joke. Don't spend your morning shoveling — let me handle it.</p>
+  </div>
+  <div class="sub-equipment-notice">
+    <strong>Equipment:</strong> I bring my own shovel. If you have a snow blower or extra tools, it's appreciated but never required.
   </div>
   <div class="est-wrap">
     <div class="est-label">Choose your yard size</div>
@@ -384,7 +427,7 @@
         </div>
         <button class="more-btn" onclick="toggleMore('w-more','w-arr','w-lbl')"><span id="w-arr">▸</span> <span id="w-lbl">More details</span></button>
         <div class="more-panel" id="w-more">
-          <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">I bring my own shovel. If you have a snow blower or extra tools, it's appreciated but not required.</span></div>
+          <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">I bring my own shovel. Snow blower or extra tools appreciated but not required.</span></div>
           <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
           <div class="more-row"><span class="mr-l">Cancellation</span><span class="mr-r">Cancel anytime — no contracts, no fees.</span></div>
           <div class="more-row"><span class="mr-l">Who am I?</span><span class="mr-r">A 13-year-old Tinley Park entrepreneur. I ride to every job by e-bike and take pride in doing the work right.</span></div>
@@ -395,6 +438,36 @@
   <div class="sub-foot">Final price confirmed after I see the job in person. Free quotes always available.</div>
 </div>
 
+<!-- CONTACT PAGE -->
+<div class="subpage" id="contactPage">
+  <div class="subpage-nav">
+    <button class="back-btn" onclick="showMain()">← Back</button>
+    <div class="subpage-nav-logo">Cam Outdoor Services / <span>Contact</span></div>
+  </div>
+  <div class="contact-page">
+    <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#888; margin-bottom:10px;">Get in touch</div>
+    <h2>Let's talk about your yard.</h2>
+    <p>Reach out before booking so we can confirm all the details. I always go over the job and price before showing up.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="contact-card-icon">📸</span>
+        <div class="contact-card-title">Instagram</div>
+        <div class="contact-card-text">DM me on Instagram — the fastest way to reach me and get a free quote.</div>
+        <a href="https://instagram.com/cams_outdoor_services" target="_blank"><button class="contact-card-btn">@cams_outdoor_services</button></a>
+      </div>
+      <div class="contact-card">
+        <span class="contact-card-icon">📧</span>
+        <div class="contact-card-title">Email</div>
+        <div class="contact-card-text">Prefer email? Send me a message and I'll get back to you as soon as I can.</div>
+        <a href="mailto:cpsheppard1012@gmail.com"><button class="contact-card-btn">Send an email</button></a>
+      </div>
+    </div>
+    <div class="contact-notice">
+      Please reach out <strong>before</strong> booking to confirm job details, equipment, and pricing. All jobs are confirmed in advance.
+    </div>
+  </div>
+</div>
+
 <script>
 const prices = {
   summer: { small:[20,30], medium:[35,45], large:[50,65] },
@@ -402,9 +475,9 @@ const prices = {
   winter: { small:[20,30], medium:[30,45], large:[45,60] }
 };
 const times = {
-  summer: { small:'30–45 min', medium:'45–60 min', large:'60–90 min' },
-  fall:   { small:'45–60 min', medium:'1–2 hrs', large:'2–3 hrs' },
-  winter: { small:'20–30 min', medium:'30–45 min', large:'45–60 min' }
+  summer: { small:'30-45 min', medium:'45-60 min', large:'60-90 min' },
+  fall:   { small:'45-60 min', medium:'1-2 hrs', large:'2-3 hrs' },
+  winter: { small:'20-30 min', medium:'30-45 min', large:'45-60 min' }
 };
 const prefix = { summer:'s', fall:'f', winter:'w' };
 
@@ -426,12 +499,12 @@ function pickSize(season, size, el) {
   const [lo,hi] = prices[season][size];
   document.getElementById(p+'-empty').style.display = 'none';
   document.getElementById(p+'-result').style.display = 'block';
-  document.getElementById(p+'-price').textContent = '$'+lo+' – $'+hi;
+  document.getElementById(p+'-price').textContent = '$'+lo+' - $'+hi;
   document.getElementById(p+'-time').textContent = times[season][size];
 }
 function toggleMore(panelId, arrId, lblId) {
   const open = document.getElementById(panelId).classList.toggle('open');
-  document.getElementById(arrId).textContent = open ? '▾' : '▸';
+  document.getElementById(arrId).textContent = open ? 'v' : '>';
   document.getElementById(lblId).textContent = open ? 'Less details' : 'More details';
 }
 </script>
