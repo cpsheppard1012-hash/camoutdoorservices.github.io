@@ -1,53 +1,439 @@
-Cam Outdoor Services
-Tinley Park, IL
-Get a free quote
-Professional yard & outdoor care
-Your yard, every season.
-Reliable, professional outdoor care for your home. Proudly serving Tinley Park and surrounding neighborhoods.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cam Outdoor Services — Tinley Park, IL</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #111; }
+  a { text-decoration: none; color: inherit; }
 
-Get a free quote
-Local & eco-friendly. I ride to every job by e-bike — no gas, no hassle, always on time.
-Choose your season
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #e5e5e5; }
+  .nav-logo { font-size: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .nav-sub { font-size: 11px; color: #888; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+  .nav-quote { font-size: 13px; color: #888; cursor: pointer; }
 
-What does your yard need?
-Spring / Summer
-Cuts by Cam
-Mowing, edging, and full yard cleanup to keep your lawn sharp all summer.
-View services →
-☀️🌿🏡
-Spring / Summer
-Cuts by Cam
-Fresh cuts, green lawns, sunny days. Your yard at its best.
-Tap to explore →
-Fall
-Rakes by Cam
-Leaf removal, bed prep, and end-of-season cleanup before winter hits.
-View services →
-🍂🍁🌾
-Fall
-Rakes by Cam
-Every leaf gone, every bed prepped. Ready for winter.
-Tap to explore →
-Winter
-Clear by Cam
-Snow shoveling and walkway clearing so you never start your day stuck.
-View services →
-❄️⛄🏠
-Winter
-Clear by Cam
-Tinley Park winters handled. Wake up to a clear driveway.
-Tap to explore →
-Why choose me
+  .hero { display: flex; flex-direction: column; align-items: center; padding: 48px 40px 40px; border-bottom: 1px solid #e5e5e5; text-align: center; }
+  .hero-tag { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 12px; }
+  .hero-title { font-size: 42px; font-weight: 600; line-height: 1.1; margin-bottom: 16px; }
+  .hero-sub { font-size: 15px; color: #666; max-width: 400px; line-height: 1.6; margin-bottom: 28px; }
+  .hero-cta { padding: 12px 28px; border: 1px solid #111; border-radius: 8px; font-size: 13px; cursor: pointer; background: transparent; letter-spacing: 0.04em; }
+  .hero-cta:hover { background: #f5f5f5; }
 
-Local, reliable, and fair.
-🚲
-E-bike delivery
-I ride to every job by e-bike. Eco-friendly and always on time.
-💬
-Honest pricing
-Fair rates, no hidden fees. Prices are always negotiable — just ask.
-📍
-Locally rooted
-Born and raised in Tinley Park. I know the neighborhoods and care about the community.
-Cam Outdoor Services
-Tinley Park, IL · Est. 2025
+  .ebike-strip { padding: 14px 40px; border-bottom: 1px solid #e5e5e5; background: #f9f9f9; text-align: center; font-size: 13px; color: #666; }
+  .ebike-strip strong { color: #111; }
+
+  .seasons-header { padding: 40px 40px 20px; text-align: center; }
+  .seasons-header p { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; }
+  .seasons-header h2 { font-size: 22px; font-weight: 600; margin-top: 8px; }
+
+  .seasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; }
+  .season-card { border-right: 1px solid #e5e5e5; cursor: pointer; overflow: hidden; position: relative; min-height: 320px; }
+  .season-card:last-child { border-right: none; }
+
+  .card-bw { padding: 36px 28px; transition: opacity 0.4s ease; position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; background: #fff; }
+  .card-color { padding: 36px 28px; position: absolute; inset: 0; opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: space-between; }
+  .season-card:hover .card-bw { opacity: 0; }
+  .season-card:hover .card-color { opacity: 1; }
+
+  .summer-color { background: linear-gradient(160deg, #87CEEB 0%, #98D870 50%, #4a9e1f 100%); }
+  .fall-color { background: linear-gradient(160deg, #E8823A 0%, #D4541A 40%, #8B2500 100%); }
+  .winter-color { background: linear-gradient(160deg, #B8D4E8 0%, #7BA7C4 40%, #2C5F7A 100%); }
+
+  .season-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 8px; }
+  .season-name { font-size: 20px; font-weight: 600; margin-bottom: 6px; }
+  .season-tagline { font-size: 13px; color: #666; line-height: 1.5; }
+  .season-link { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  .color-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-bottom: 8px; }
+  .color-name { font-size: 20px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+  .color-tagline { font-size: 13px; color: rgba(255,255,255,0.9); line-height: 1.5; }
+  .color-link { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; }
+  .scene { font-size: 48px; text-align: center; margin-bottom: 12px; }
+
+  .info-section { padding: 48px 40px; border-bottom: 1px solid #e5e5e5; }
+  .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+  .info-card { padding: 20px; border: 1px solid #e5e5e5; border-radius: 12px; }
+  .info-card-icon { font-size: 20px; margin-bottom: 10px; display: block; }
+  .info-card-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  .info-card-text { font-size: 13px; color: #666; line-height: 1.5; }
+
+  .footer { padding: 28px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e5e5e5; }
+  .footer-name { font-size: 13px; font-weight: 600; }
+  .footer-loc { font-size: 12px; color: #888; }
+
+  .subpage { display: none; }
+  .subpage.active { display: block; }
+  .main-site.hidden { display: none; }
+
+  .subpage-nav { display: flex; align-items: center; gap: 16px; padding: 20px 40px; border-bottom: 1px solid #e5e5e5; }
+  .back-btn { font-size: 13px; color: #888; cursor: pointer; background: none; border: none; }
+  .back-btn:hover { color: #111; }
+  .subpage-nav-logo { font-size: 14px; color: #888; }
+  .subpage-nav-logo span { color: #111; font-weight: 600; }
+
+  .sub-hero { padding: 48px 40px 32px; border-bottom: 1px solid #e5e5e5; }
+  .sub-tag { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 10px; }
+  .sub-title { font-size: 36px; font-weight: 600; margin-bottom: 10px; }
+  .sub-desc { font-size: 15px; color: #666; max-width: 480px; line-height: 1.6; }
+
+  .est-wrap { padding: 32px 40px; }
+  .est-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 12px; }
+  .size-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 20px; }
+  .size-btn { padding: 14px 10px; border: 1px solid #e5e5e5; border-radius: 8px; background: #fff; cursor: pointer; text-align: center; transition: all 0.12s; }
+  .size-btn:hover { background: #f5f5f5; }
+  .size-btn.active { border: 2px solid #111; background: #f5f5f5; }
+  .size-btn .sz { font-size: 14px; font-weight: 600; }
+  .size-btn .sd { font-size: 12px; color: #888; margin-top: 3px; }
+
+  .result-box { border: 1px solid #e5e5e5; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+  .r-empty { font-size: 14px; color: #888; text-align: center; padding: 24px 0; }
+  .r-brand { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+  .r-sub { font-size: 13px; color: #888; margin-bottom: 10px; }
+  .r-price { font-size: 36px; font-weight: 600; margin-bottom: 4px; }
+  .r-note { font-size: 13px; color: #666; margin-bottom: 4px; }
+  .r-neg { font-size: 13px; color: #2e7d32; }
+  .r-div { border: none; border-top: 1px solid #e5e5e5; margin: 14px 0; }
+  .r-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+  .r-item { background: #f9f9f9; border-radius: 8px; padding: 10px 12px; }
+  .r-item-label { font-size: 11px; color: #888; margin-bottom: 3px; }
+  .r-item-val { font-size: 13px; font-weight: 600; }
+
+  .more-btn { font-size: 13px; color: #888; cursor: pointer; background: none; border: none; display: flex; align-items: center; gap: 6px; }
+  .more-btn:hover { color: #111; }
+  .more-panel { display: none; margin-top: 14px; padding-top: 14px; border-top: 1px solid #e5e5e5; }
+  .more-panel.open { display: block; }
+  .more-row { display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; border-bottom: 1px solid #e5e5e5; font-size: 13px; }
+  .more-row:last-child { border-bottom: none; }
+  .mr-l { color: #888; flex-shrink: 0; }
+  .mr-r { color: #111; font-weight: 500; text-align: right; }
+
+  .sub-foot { font-size: 12px; color: #888; padding: 0 40px 32px; line-height: 1.6; }
+
+  @media (max-width: 700px) {
+    .nav { padding: 16px 20px; }
+    .hero { padding: 32px 20px; }
+    .hero-title { font-size: 28px; }
+    .seasons-grid { grid-template-columns: 1fr; }
+    .season-card { min-height: 200px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .est-wrap { padding: 24px 20px; }
+    .size-row { grid-template-columns: 1fr 1fr 1fr; }
+    .sub-hero { padding: 32px 20px 24px; }
+    .subpage-nav { padding: 16px 20px; }
+    .info-section { padding: 32px 20px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="main-site" id="mainSite">
+  <nav class="nav">
+    <div>
+      <div class="nav-logo">Cam Outdoor Services</div>
+      <div class="nav-sub">Tinley Park, IL</div>
+    </div>
+    <div class="nav-quote">Get a free quote</div>
+  </nav>
+
+  <section class="hero">
+    <div style="margin-bottom:24px;">
+      <svg width="110" height="160" viewBox="0 0 110 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="55" cy="28" r="22" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
+        <rect x="28" y="18" width="54" height="14" rx="7" fill="#111" opacity="0.85"/>
+        <ellipse cx="43" cy="25" rx="5" ry="3.5" fill="#fff" opacity="0.9"/>
+        <ellipse cx="67" cy="25" rx="5" ry="3.5" fill="#fff" opacity="0.9"/>
+        <ellipse cx="43" cy="25" rx="3" ry="2.5" fill="#111" opacity="0.5"/>
+        <ellipse cx="67" cy="25" rx="3" ry="2.5" fill="#111" opacity="0.5"/>
+        <rect x="32" y="50" width="46" height="58" rx="10" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
+        <rect x="36" y="58" width="38" height="4" rx="2" fill="#ccc"/>
+        <rect x="36" y="66" width="28" height="4" rx="2" fill="#ccc"/>
+        <rect x="18" y="54" width="14" height="38" rx="7" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
+        <rect x="78" y="54" width="14" height="38" rx="7" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
+        <rect x="36" y="108" width="16" height="44" rx="8" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
+        <rect x="58" y="108" width="16" height="44" rx="8" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
+        <rect x="32" y="108" width="12" height="6" rx="2" fill="#bbb"/>
+        <rect x="66" y="108" width="12" height="6" rx="2" fill="#bbb"/>
+      </svg>
+    </div>
+    <div class="hero-tag">Professional yard & outdoor care</div>
+    <h1 class="hero-title">Your yard, every season.</h1>
+    <p class="hero-sub">Reliable, professional outdoor care for your home. Proudly serving Tinley Park and surrounding neighborhoods.</p>
+    <button class="hero-cta">Get a free quote</button>
+  </section>
+
+  <div class="ebike-strip">
+    <strong>Local & eco-friendly.</strong> I ride to every job by e-bike — no gas, no hassle, always on time.
+  </div>
+
+  <div class="seasons-header">
+    <p>Choose your season</p>
+    <h2>What does your yard need?</h2>
+  </div>
+
+  <div class="seasons-grid">
+    <div class="season-card" onclick="showSub('summer')">
+      <div class="card-bw">
+        <div>
+          <div class="season-label">Spring / Summer</div>
+          <div class="season-name">Cuts by Cam</div>
+          <div class="season-tagline">Mowing, edging, and full yard cleanup to keep your lawn sharp all summer.</div>
+        </div>
+        <div class="season-link">View services →</div>
+      </div>
+      <div class="card-color summer-color">
+        <div>
+          <div class="scene">☀️🌿🏡</div>
+          <div class="color-label">Spring / Summer</div>
+          <div class="color-name">Cuts by Cam</div>
+          <div class="color-tagline">Fresh cuts, green lawns, sunny days. Your yard at its best.</div>
+        </div>
+        <div class="color-link">Tap to explore →</div>
+      </div>
+    </div>
+
+    <div class="season-card" onclick="showSub('fall')">
+      <div class="card-bw">
+        <div>
+          <div class="season-label">Fall</div>
+          <div class="season-name">Rakes by Cam</div>
+          <div class="season-tagline">Leaf removal, bed prep, and end-of-season cleanup before winter hits.</div>
+        </div>
+        <div class="season-link">View services →</div>
+      </div>
+      <div class="card-color fall-color">
+        <div>
+          <div class="scene">🍂🍁🌾</div>
+          <div class="color-label">Fall</div>
+          <div class="color-name">Rakes by Cam</div>
+          <div class="color-tagline">Every leaf gone, every bed prepped. Ready for winter.</div>
+        </div>
+        <div class="color-link">Tap to explore →</div>
+      </div>
+    </div>
+
+    <div class="season-card" onclick="showSub('winter')">
+      <div class="card-bw">
+        <div>
+          <div class="season-label">Winter</div>
+          <div class="season-name">Clear by Cam</div>
+          <div class="season-tagline">Snow shoveling and walkway clearing so you never start your day stuck.</div>
+        </div>
+        <div class="season-link">View services →</div>
+      </div>
+      <div class="card-color winter-color">
+        <div>
+          <div class="scene">❄️⛄🏠</div>
+          <div class="color-label">Winter</div>
+          <div class="color-name">Clear by Cam</div>
+          <div class="color-tagline">Tinley Park winters handled. Wake up to a clear driveway.</div>
+        </div>
+        <div class="color-link">Tap to explore →</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <p style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#888; margin-bottom:6px;">Why choose me</p>
+    <h2 style="font-size:20px; font-weight:600;">Local, reliable, and fair.</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="info-card-icon">🚲</span>
+        <div class="info-card-title">E-bike delivery</div>
+        <div class="info-card-text">I ride to every job by e-bike. Eco-friendly and always on time.</div>
+      </div>
+      <div class="info-card">
+        <span class="info-card-icon">💬</span>
+        <div class="info-card-title">Honest pricing</div>
+        <div class="info-card-text">Fair rates, no hidden fees. Prices are always negotiable — just ask.</div>
+      </div>
+      <div class="info-card">
+        <span class="info-card-icon">📍</span>
+        <div class="info-card-title">Locally rooted</div>
+        <div class="info-card-text">Born and raised in Tinley Park. I know the neighborhoods and care about the community.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-name">Cam Outdoor Services</div>
+    <div class="footer-loc">Tinley Park, IL · Est. 2025</div>
+  </footer>
+</div>
+
+<!-- SUMMER PAGE -->
+<div class="subpage" id="summerPage">
+  <div class="subpage-nav">
+    <button class="back-btn" onclick="showMain()">← Back</button>
+    <div class="subpage-nav-logo">Cam Outdoor Services / <span>Cuts by Cam</span></div>
+  </div>
+  <div class="sub-hero" style="background: linear-gradient(160deg, #e8f5d0, #f5fcea);">
+    <div class="sub-tag">Spring / Summer</div>
+    <h2 class="sub-title">Cuts by Cam</h2>
+    <p class="sub-desc">Keep your lawn sharp all season. Professional mowing and yard care — I ride to every job by e-bike.</p>
+  </div>
+  <div class="est-wrap">
+    <div class="est-label">Choose your yard size</div>
+    <div class="size-row">
+      <div class="size-btn" onclick="pickSize('summer','small',this)"><div class="sz">Small</div><div class="sd">Townhouse or small lot</div></div>
+      <div class="size-btn" onclick="pickSize('summer','medium',this)"><div class="sz">Medium</div><div class="sd">Average suburban yard</div></div>
+      <div class="size-btn" onclick="pickSize('summer','large',this)"><div class="sz">Large</div><div class="sd">Big yard or corner lot</div></div>
+    </div>
+    <div class="result-box">
+      <div class="r-empty" id="s-empty">Select a yard size to see your estimate.</div>
+      <div id="s-result" style="display:none;">
+        <div class="r-brand">Cuts by Cam</div>
+        <div class="r-sub">Lawn mowing · Spring / Summer</div>
+        <div class="r-price" id="s-price"></div>
+        <div class="r-note">Includes mowing, clipping cleanup, and basic edging.</div>
+        <div class="r-neg">Prices are negotiable — just ask.</div>
+        <hr class="r-div">
+        <div class="r-grid">
+          <div class="r-item"><div class="r-item-label">Estimated time</div><div class="r-item-val" id="s-time"></div></div>
+          <div class="r-item"><div class="r-item-label">Frequency</div><div class="r-item-val">Weekly or biweekly</div></div>
+        </div>
+        <button class="more-btn" onclick="toggleMore('s-more','s-arr','s-lbl')"><span id="s-arr">▸</span> <span id="s-lbl">More details</span></button>
+        <div class="more-panel" id="s-more">
+          <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">You must provide your own mower and lawn equipment. No equipment = no service at this time.</span></div>
+          <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
+          <div class="more-row"><span class="mr-l">Cancellation</span><span class="mr-r">Cancel anytime — no contracts, no fees.</span></div>
+          <div class="more-row"><span class="mr-l">Who am I?</span><span class="mr-r">A 13-year-old Tinley Park entrepreneur. I ride to every job by e-bike and take pride in doing the work right.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-foot">Final price confirmed after I see the job in person. Free quotes always available.</div>
+</div>
+
+<!-- FALL PAGE -->
+<div class="subpage" id="fallPage">
+  <div class="subpage-nav">
+    <button class="back-btn" onclick="showMain()">← Back</button>
+    <div class="subpage-nav-logo">Cam Outdoor Services / <span>Rakes by Cam</span></div>
+  </div>
+  <div class="sub-hero" style="background: linear-gradient(160deg, #fdebd0, #fdf3e3);">
+    <div class="sub-tag">Fall</div>
+    <h2 class="sub-title">Rakes by Cam</h2>
+    <p class="sub-desc">Don't let fall leaves take over. Full cleanup and winter prep so your yard is ready for the cold.</p>
+  </div>
+  <div class="est-wrap">
+    <div class="est-label">Choose your yard size</div>
+    <div class="size-row">
+      <div class="size-btn" onclick="pickSize('fall','small',this)"><div class="sz">Small</div><div class="sd">Townhouse or small lot</div></div>
+      <div class="size-btn" onclick="pickSize('fall','medium',this)"><div class="sz">Medium</div><div class="sd">Average suburban yard</div></div>
+      <div class="size-btn" onclick="pickSize('fall','large',this)"><div class="sz">Large</div><div class="sd">Big yard or corner lot</div></div>
+    </div>
+    <div class="result-box">
+      <div class="r-empty" id="f-empty">Select a yard size to see your estimate.</div>
+      <div id="f-result" style="display:none;">
+        <div class="r-brand">Rakes by Cam</div>
+        <div class="r-sub">Leaf cleanup · Fall</div>
+        <div class="r-price" id="f-price"></div>
+        <div class="r-note">Includes raking, bagging, and hauling.</div>
+        <div class="r-neg">Prices are negotiable — just ask.</div>
+        <hr class="r-div">
+        <div class="r-grid">
+          <div class="r-item"><div class="r-item-label">Estimated time</div><div class="r-item-val" id="f-time"></div></div>
+          <div class="r-item"><div class="r-item-label">Frequency</div><div class="r-item-val">As needed in fall</div></div>
+        </div>
+        <button class="more-btn" onclick="toggleMore('f-more','f-arr','f-lbl')"><span id="f-arr">▸</span> <span id="f-lbl">More details</span></button>
+        <div class="more-panel" id="f-more">
+          <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">I bring my own rake. If you have extra yard tools, it's appreciated but not required.</span></div>
+          <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
+          <div class="more-row"><span class="mr-l">Cancellation</span><span class="mr-r">Cancel anytime — no contracts, no fees.</span></div>
+          <div class="more-row"><span class="mr-l">Who am I?</span><span class="mr-r">A 13-year-old Tinley Park entrepreneur. I ride to every job by e-bike and take pride in doing the work right.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-foot">Final price confirmed after I see the job in person. Free quotes always available.</div>
+</div>
+
+<!-- WINTER PAGE -->
+<div class="subpage" id="winterPage">
+  <div class="subpage-nav">
+    <button class="back-btn" onclick="showMain()">← Back</button>
+    <div class="subpage-nav-logo">Cam Outdoor Services / <span>Clear by Cam</span></div>
+  </div>
+  <div class="sub-hero" style="background: linear-gradient(160deg, #d6eaf8, #eaf4fb);">
+    <div class="sub-tag">Winter</div>
+    <h2 class="sub-title">Clear by Cam</h2>
+    <p class="sub-desc">Tinley Park winters are no joke. Don't spend your morning shoveling — let me handle it.</p>
+  </div>
+  <div class="est-wrap">
+    <div class="est-label">Choose your yard size</div>
+    <div class="size-row">
+      <div class="size-btn" onclick="pickSize('winter','small',this)"><div class="sz">Small</div><div class="sd">Townhouse or small lot</div></div>
+      <div class="size-btn" onclick="pickSize('winter','medium',this)"><div class="sz">Medium</div><div class="sd">Average suburban yard</div></div>
+      <div class="size-btn" onclick="pickSize('winter','large',this)"><div class="sz">Large</div><div class="sd">Big yard or corner lot</div></div>
+    </div>
+    <div class="result-box">
+      <div class="r-empty" id="w-empty">Select a yard size to see your estimate.</div>
+      <div id="w-result" style="display:none;">
+        <div class="r-brand">Clear by Cam</div>
+        <div class="r-sub">Snow shoveling · Winter</div>
+        <div class="r-price" id="w-price"></div>
+        <div class="r-note">Includes driveway, walkways, and front stairs.</div>
+        <div class="r-neg">Prices are negotiable — just ask.</div>
+        <hr class="r-div">
+        <div class="r-grid">
+          <div class="r-item"><div class="r-item-label">Estimated time</div><div class="r-item-val" id="w-time"></div></div>
+          <div class="r-item"><div class="r-item-label">Frequency</div><div class="r-item-val">After each snowfall</div></div>
+        </div>
+        <button class="more-btn" onclick="toggleMore('w-more','w-arr','w-lbl')"><span id="w-arr">▸</span> <span id="w-lbl">More details</span></button>
+        <div class="more-panel" id="w-more">
+          <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">I bring my own shovel. If you have a snow blower or extra tools, it's appreciated but not required.</span></div>
+          <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
+          <div class="more-row"><span class="mr-l">Cancellation</span><span class="mr-r">Cancel anytime — no contracts, no fees.</span></div>
+          <div class="more-row"><span class="mr-l">Who am I?</span><span class="mr-r">A 13-year-old Tinley Park entrepreneur. I ride to every job by e-bike and take pride in doing the work right.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-foot">Final price confirmed after I see the job in person. Free quotes always available.</div>
+</div>
+
+<script>
+const prices = {
+  summer: { small:[20,30], medium:[35,45], large:[50,65] },
+  fall:   { small:[25,40], medium:[45,65], large:[70,100] },
+  winter: { small:[20,30], medium:[30,45], large:[45,60] }
+};
+const times = {
+  summer: { small:'30–45 min', medium:'45–60 min', large:'60–90 min' },
+  fall:   { small:'45–60 min', medium:'1–2 hrs', large:'2–3 hrs' },
+  winter: { small:'20–30 min', medium:'30–45 min', large:'45–60 min' }
+};
+const prefix = { summer:'s', fall:'f', winter:'w' };
+
+function showSub(season) {
+  document.getElementById('mainSite').classList.add('hidden');
+  document.querySelectorAll('.subpage').forEach(p => p.classList.remove('active'));
+  document.getElementById(season+'Page').classList.add('active');
+  window.scrollTo(0,0);
+}
+function showMain() {
+  document.getElementById('mainSite').classList.remove('hidden');
+  document.querySelectorAll('.subpage').forEach(p => p.classList.remove('active'));
+  window.scrollTo(0,0);
+}
+function pickSize(season, size, el) {
+  el.closest('.size-row').querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  const p = prefix[season];
+  const [lo,hi] = prices[season][size];
+  document.getElementById(p+'-empty').style.display = 'none';
+  document.getElementById(p+'-result').style.display = 'block';
+  document.getElementById(p+'-price').textContent = '$'+lo+' – $'+hi;
+  document.getElementById(p+'-time').textContent = times[season][size];
+}
+function toggleMore(panelId, arrId, lblId) {
+  const open = document.getElementById(panelId).classList.toggle('open');
+  document.getElementById(arrId).textContent = open ? '▾' : '▸';
+  document.getElementById(lblId).textContent = open ? 'Less details' : 'More details';
+}
+</script>
+</body>
+</html>
