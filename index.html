@@ -395,7 +395,7 @@
   <div class="sub-foot">Final price confirmed after I see the job in person. Free quotes always available.</div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const prices = {
   summer: { small:[20,30], medium:[35,45], large:[50,65] },
   fall:   { small:[25,40], medium:[45,65], large:[70,100] },
@@ -430,4 +430,10 @@ function pickSize(season, size, el) {
   document.getElementById(p+'-time').textContent = times[season][size];
 }
 function toggleMore(panelId, arrId, lblId) {
-  const open = document.getElementById(panelId).classLis
+  const open = document.getElementById(panelId).classList.toggle('open');
+  document.getElementById(arrId).textContent = open ? '▾' : '▸';
+  document.getElementById(lblId).textContent = open ? 'Less details' : 'More details';
+}
+</script>
+</body>
+</html>
