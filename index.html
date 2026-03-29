@@ -19,7 +19,7 @@
   .hero { display: flex; flex-direction: column; align-items: center; padding: 48px 40px 40px; border-bottom: 1px solid #e5e5e5; text-align: center; }
   .hero-tag { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 12px; }
   .hero-title { font-size: 42px; font-weight: 600; line-height: 1.1; margin-bottom: 16px; }
-  .hero-sub { font-size: 15px; color: #666; max-width: 400px; line-height: 1.6; margin-bottom: 28px; }
+  .hero-sub { font-size: 15px; color: #666; max-width: 420px; line-height: 1.6; margin-bottom: 28px; }
   .hero-cta { padding: 12px 28px; border: 1px solid #111; border-radius: 8px; font-size: 13px; cursor: pointer; background: transparent; letter-spacing: 0.04em; }
   .hero-cta:hover { background: #f5f5f5; }
 
@@ -35,7 +35,7 @@
   .seasons-header h2 { font-size: 22px; font-weight: 600; margin-top: 8px; }
 
   .seasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; }
-  .season-card { border-right: 1px solid #e5e5e5; cursor: pointer; overflow: hidden; position: relative; min-height: 320px; }
+  .season-card { border-right: 1px solid #e5e5e5; cursor: pointer; overflow: hidden; position: relative; min-height: 300px; }
   .season-card:last-child { border-right: none; }
 
   .card-bw { padding: 36px 28px; transition: opacity 0.4s ease; position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; background: #fff; }
@@ -55,7 +55,30 @@
   .color-name { font-size: 20px; font-weight: 600; color: #fff; margin-bottom: 6px; }
   .color-tagline { font-size: 13px; color: rgba(255,255,255,0.9); line-height: 1.5; }
   .color-link { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; }
-  .scene { font-size: 48px; text-align: center; margin-bottom: 12px; }
+  .scene { font-size: 44px; text-align: center; margin-bottom: 12px; }
+
+  .yearround-section { background: #111; }
+  .yearround-header { padding: 40px 40px 20px; text-align: center; }
+  .yearround-header p { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #666; }
+  .yearround-header h2 { font-size: 22px; font-weight: 600; margin-top: 8px; color: #fff; }
+
+  .yearround-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #333; }
+  .yr-card { border-right: 1px solid #333; cursor: pointer; overflow: hidden; position: relative; min-height: 300px; }
+  .yr-card:last-child { border-right: none; }
+
+  .yr-card-bw { padding: 36px 28px; transition: opacity 0.4s ease; position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; background: #111; }
+  .yr-card-color { padding: 36px 28px; position: absolute; inset: 0; opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: space-between; }
+  .yr-card:hover .yr-card-bw { opacity: 0; }
+  .yr-card:hover .yr-card-color { opacity: 1; }
+
+  .spray-color { background: linear-gradient(160deg, #0D47A1 0%, #1565C0 40%, #0288D1 100%); }
+  .clean-color { background: linear-gradient(160deg, #1B5E20 0%, #2E7D32 40%, #66BB6A 100%); }
+  .haul-color { background: linear-gradient(160deg, #BF360C 0%, #E64A19 40%, #FF7043 100%); }
+
+  .yr-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #666; margin-bottom: 8px; }
+  .yr-name { font-size: 20px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+  .yr-tagline { font-size: 13px; color: #999; line-height: 1.5; }
+  .yr-link { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #666; }
 
   .info-section { padding: 48px 40px; border-bottom: 1px solid #e5e5e5; }
   .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
@@ -95,11 +118,22 @@
   .size-btn .sz { font-size: 14px; font-weight: 600; }
   .size-btn .sd { font-size: 12px; color: #888; margin-top: 3px; }
 
+  .addon-row { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border: 1px solid #e5e5e5; border-radius: 10px; margin-bottom: 20px; cursor: pointer; transition: all 0.12s; }
+  .addon-row:hover { background: #f9f9f9; }
+  .addon-row.active { border: 2px solid #111; background: #f5f5f5; }
+  .addon-check { width: 20px; height: 20px; border: 2px solid #ccc; border-radius: 5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; font-weight: 700; color: #111; }
+  .addon-row.active .addon-check { border-color: #111; background: #111; color: #fff; }
+  .addon-text { flex: 1; }
+  .addon-name { font-size: 14px; font-weight: 600; color: #111; }
+  .addon-desc { font-size: 12px; color: #888; margin-top: 2px; }
+  .addon-price { font-size: 14px; font-weight: 600; color: #111; }
+
   .result-box { border: 1px solid #e5e5e5; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
   .r-empty { font-size: 14px; color: #888; text-align: center; padding: 24px 0; }
   .r-brand { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
   .r-sub { font-size: 13px; color: #888; margin-bottom: 10px; }
   .r-price { font-size: 36px; font-weight: 600; margin-bottom: 4px; }
+  .r-addon-tag { font-size: 13px; color: #1565C0; margin-bottom: 4px; }
   .r-note { font-size: 13px; color: #666; margin-bottom: 4px; }
   .r-neg { font-size: 13px; color: #2e7d32; }
   .r-div { border: none; border-top: 1px solid #e5e5e5; margin: 14px 0; }
@@ -135,7 +169,9 @@
     .hero { padding: 32px 20px; }
     .hero-title { font-size: 28px; }
     .seasons-grid { grid-template-columns: 1fr; }
+    .yearround-grid { grid-template-columns: 1fr; }
     .season-card { min-height: 200px; }
+    .yr-card { min-height: 200px; }
     .info-grid { grid-template-columns: 1fr; }
     .est-wrap { padding: 24px 20px; }
     .sub-hero { padding: 32px 20px 24px; }
@@ -146,6 +182,7 @@
     .contact-page { padding: 32px 20px; }
     .equipment-banner { padding: 16px 20px; }
     .sub-equipment-notice { margin: 16px 20px 0; }
+    .yearround-header { padding: 32px 20px 16px; }
   }
 </style>
 </head>
@@ -164,35 +201,9 @@
   </nav>
 
   <section class="hero">
-    <div style="margin-bottom: 28px;">
-      <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- LAWNMOWER -->
-        <rect x="8" y="58" width="70" height="34" rx="9" fill="#f0f0f0" stroke="#111" stroke-width="2"/>
-        <circle cx="22" cy="96" r="11" fill="#fff" stroke="#111" stroke-width="2"/>
-        <circle cx="66" cy="96" r="11" fill="#fff" stroke="#111" stroke-width="2"/>
-        <circle cx="22" cy="96" r="4.5" fill="#111"/>
-        <circle cx="66" cy="96" r="4.5" fill="#111"/>
-        <rect x="55" y="32" width="7" height="30" rx="3.5" fill="#111"/>
-        <rect x="48" y="26" width="21" height="11" rx="5.5" fill="#111"/>
-        <rect x="18" y="65" width="30" height="7" rx="3" fill="#ccc"/>
-        <rect x="18" y="74" width="20" height="5" rx="2" fill="#bbb"/>
-        <!-- RAKE -->
-        <rect x="108" y="8" width="6" height="82" rx="3" fill="#8B5E3C" stroke="#6b4423" stroke-width="1"/>
-        <rect x="94" y="86" width="34" height="6" rx="3" fill="#444"/>
-        <rect x="95" y="92" width="4" height="14" rx="2" fill="#444"/>
-        <rect x="103" y="92" width="4" height="14" rx="2" fill="#444"/>
-        <rect x="111" y="92" width="4" height="14" rx="2" fill="#444"/>
-        <rect x="119" y="92" width="4" height="14" rx="2" fill="#444"/>
-        <!-- SHOVEL -->
-        <rect x="158" y="6" width="6" height="74" rx="3" fill="#8B5E3C" stroke="#6b4423" stroke-width="1"/>
-        <rect x="152" y="72" width="18" height="8" rx="3" fill="#999"/>
-        <path d="M152 80 Q143 90 143 100 Q143 116 161 118 Q179 116 179 100 Q179 90 170 80 Z" fill="#e0e0e0" stroke="#111" stroke-width="2"/>
-        <rect x="153" y="78" width="16" height="6" rx="2" fill="#ccc"/>
-      </svg>
-    </div>
     <div class="hero-tag">Professional yard & outdoor care</div>
     <h1 class="hero-title">Your yard, every season.</h1>
-    <p class="hero-sub">Reliable, professional outdoor care for your home. Proudly serving Tinley Park and surrounding neighborhoods.</p>
+    <p class="hero-sub">Reliable, professional outdoor care for your home. Lawn care, pressure washing, cleanouts and more. Proudly serving Tinley Park.</p>
     <a href="https://instagram.com/cams_outdoor_services" target="_blank"><button class="hero-cta">Get a free quote</button></a>
   </section>
 
@@ -200,12 +211,16 @@
     <strong>Local & eco-friendly.</strong> I ride to every job by e-bike — no gas, no hassle, always on time.
   </div>
 
+  <div style="padding: 16px 40px; background: #fff; border-bottom: 1px solid #e5e5e5; text-align: center;">
+    <p style="font-size: 14px; color: #111; font-weight: 600; letter-spacing: 0.02em;">All jobs require at least 24 hours notice before scheduling.</p>
+  </div>
+
   <div class="equipment-banner">
-    <p><strong>Important:</strong> For lawn mowing, you must provide your own mower and grass equipment. No equipment = no service at this time. Please reach out before booking. Raking and shoveling tools are provided by me — extra tools are appreciated but never required.</p>
+    <p><strong>Important:</strong> For lawn mowing, you must provide your own mower and grass equipment. No equipment = no service at this time. Please reach out before booking. All other tools provided by me.</p>
   </div>
 
   <div class="seasons-header">
-    <p>Choose your season</p>
+    <p>Seasonal services</p>
     <h2>What does your yard need?</h2>
   </div>
 
@@ -269,6 +284,72 @@
     </div>
   </div>
 
+  <div class="yearround-section">
+    <div class="yearround-header">
+      <p>Available right now</p>
+      <h2>Year round services</h2>
+    </div>
+    <div class="yearround-grid">
+      <div class="yr-card" onclick="showSub('spray')">
+        <div class="yr-card-bw">
+          <div>
+            <div class="yr-label">Year round</div>
+            <div class="yr-name">Spray by Cam</div>
+            <div class="yr-tagline">Pressure washing for driveways, sidewalks, patios, and more.</div>
+          </div>
+          <div class="yr-link">View services →</div>
+        </div>
+        <div class="yr-card-color spray-color">
+          <div>
+            <div class="scene">💦🏠✨</div>
+            <div class="color-label">Year round</div>
+            <div class="color-name">Spray by Cam</div>
+            <div class="color-tagline">Blast away the grime. Driveways, patios, sidewalks — all of it.</div>
+          </div>
+          <div class="color-link">Tap to explore →</div>
+        </div>
+      </div>
+      <div class="yr-card" onclick="showSub('clean')">
+        <div class="yr-card-bw">
+          <div>
+            <div class="yr-label">Year round</div>
+            <div class="yr-name">Clean by Cam</div>
+            <div class="yr-tagline">Garbage can cleaning so you never have to deal with the smell again.</div>
+          </div>
+          <div class="yr-link">View services →</div>
+        </div>
+        <div class="yr-card-color clean-color">
+          <div>
+            <div class="scene">🗑️🧼✅</div>
+            <div class="color-label">Year round</div>
+            <div class="color-name">Clean by Cam</div>
+            <div class="color-tagline">Nobody wants to do it. I will. Fresh, clean, no smell.</div>
+          </div>
+          <div class="color-link">Tap to explore →</div>
+        </div>
+      </div>
+      <div class="yr-card" onclick="showSub('haul')">
+        <div class="yr-card-bw">
+          <div>
+            <div class="yr-label">Year round</div>
+            <div class="yr-name">Haul by Cam</div>
+            <div class="yr-tagline">Garage cleanouts. Clear the clutter, reclaim your space.</div>
+          </div>
+          <div class="yr-link">View services →</div>
+        </div>
+        <div class="yr-card-color haul-color">
+          <div>
+            <div class="scene">📦🚪💪</div>
+            <div class="color-label">Year round</div>
+            <div class="color-name">Haul by Cam</div>
+            <div class="color-tagline">That garage you've been putting off? Let's handle it.</div>
+          </div>
+          <div class="color-link">Tap to explore →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="info-section">
     <p style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#888; margin-bottom:6px;">Why choose me</p>
     <h2 style="font-size:20px; font-weight:600;">Local, reliable, and fair.</h2>
@@ -309,7 +390,7 @@
     <p class="sub-desc">Keep your lawn sharp all season. Professional mowing and yard care — I ride to every job by e-bike.</p>
   </div>
   <div class="sub-equipment-notice">
-    <strong>Equipment required:</strong> You must provide your own mower and lawn equipment. Please reach out before booking to confirm. No equipment available = no service at this time.
+    <strong>Equipment required:</strong> You must provide your own mower and lawn equipment. Please reach out before booking. No equipment = no service at this time.
   </div>
   <div class="est-wrap">
     <div class="est-label">Choose your yard size</div>
@@ -331,7 +412,7 @@
           <div class="r-item"><div class="r-item-label">Estimated time</div><div class="r-item-val" id="s-time"></div></div>
           <div class="r-item"><div class="r-item-label">Frequency</div><div class="r-item-val">Weekly or biweekly</div></div>
         </div>
-        <button class="more-btn" onclick="toggleMore('s-more','s-arr','s-lbl')"><span id="s-arr">▸</span> <span id="s-lbl">More details</span></button>
+        <button class="more-btn" onclick="toggleMore('s-more','s-arr','s-lbl')"><span id="s-arr">></span> <span id="s-lbl">More details</span></button>
         <div class="more-panel" id="s-more">
           <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">You must provide your own mower and lawn equipment. No equipment = no service at this time.</span></div>
           <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
@@ -378,7 +459,7 @@
           <div class="r-item"><div class="r-item-label">Estimated time</div><div class="r-item-val" id="f-time"></div></div>
           <div class="r-item"><div class="r-item-label">Frequency</div><div class="r-item-val">As needed in fall</div></div>
         </div>
-        <button class="more-btn" onclick="toggleMore('f-more','f-arr','f-lbl')"><span id="f-arr">▸</span> <span id="f-lbl">More details</span></button>
+        <button class="more-btn" onclick="toggleMore('f-more','f-arr','f-lbl')"><span id="f-arr">></span> <span id="f-lbl">More details</span></button>
         <div class="more-panel" id="f-more">
           <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">I bring my own rake. Extra tools appreciated but not required.</span></div>
           <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
@@ -425,9 +506,155 @@
           <div class="r-item"><div class="r-item-label">Estimated time</div><div class="r-item-val" id="w-time"></div></div>
           <div class="r-item"><div class="r-item-label">Frequency</div><div class="r-item-val">After each snowfall</div></div>
         </div>
-        <button class="more-btn" onclick="toggleMore('w-more','w-arr','w-lbl')"><span id="w-arr">▸</span> <span id="w-lbl">More details</span></button>
+        <button class="more-btn" onclick="toggleMore('w-more','w-arr','w-lbl')"><span id="w-arr">></span> <span id="w-lbl">More details</span></button>
         <div class="more-panel" id="w-more">
           <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">I bring my own shovel. Snow blower or extra tools appreciated but not required.</span></div>
+          <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
+          <div class="more-row"><span class="mr-l">Cancellation</span><span class="mr-r">Cancel anytime — no contracts, no fees.</span></div>
+          <div class="more-row"><span class="mr-l">Who am I?</span><span class="mr-r">A 13-year-old Tinley Park entrepreneur. I ride to every job by e-bike and take pride in doing the work right.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-foot">Final price confirmed after I see the job in person. Free quotes always available.</div>
+</div>
+
+<!-- SPRAY PAGE -->
+<div class="subpage" id="sprayPage">
+  <div class="subpage-nav">
+    <button class="back-btn" onclick="showMain()">← Back</button>
+    <div class="subpage-nav-logo">Cam Outdoor Services / <span>Spray by Cam</span></div>
+  </div>
+  <div class="sub-hero" style="background: linear-gradient(160deg, #e3f2fd, #e8f4fd);">
+    <div class="sub-tag">Year round</div>
+    <h2 class="sub-title">Spray by Cam</h2>
+    <p class="sub-desc">Pressure washing for driveways, sidewalks, patios, fences, and more. Makes everything look brand new.</p>
+  </div>
+  <div class="sub-equipment-notice">
+    <strong>Equipment:</strong> I may have a pressure washer available — please reach out to confirm before booking.
+  </div>
+  <div class="est-wrap">
+    <div class="est-label">Choose job size</div>
+    <div class="size-row">
+      <div class="size-btn" onclick="pickSize('spray','small',this)"><div class="sz">Small</div><div class="sd">Single driveway or path</div></div>
+      <div class="size-btn" onclick="pickSize('spray','medium',this)"><div class="sz">Medium</div><div class="sd">Driveway + patio or walkways</div></div>
+      <div class="size-btn" onclick="pickSize('spray','large',this)"><div class="sz">Large</div><div class="sd">Full property washdown</div></div>
+    </div>
+    <div class="result-box">
+      <div class="r-empty" id="sp-empty">Select a job size to see your estimate.</div>
+      <div id="sp-result" style="display:none;">
+        <div class="r-brand">Spray by Cam</div>
+        <div class="r-sub">Pressure washing · Year round</div>
+        <div class="r-price" id="sp-price"></div>
+        <div class="r-note">Includes full washdown of selected areas.</div>
+        <div class="r-neg">Prices are negotiable — just ask.</div>
+        <hr class="r-div">
+        <div class="r-grid">
+          <div class="r-item"><div class="r-item-label">Estimated time</div><div class="r-item-val" id="sp-time"></div></div>
+          <div class="r-item"><div class="r-item-label">Availability</div><div class="r-item-val">Year round</div></div>
+        </div>
+        <button class="more-btn" onclick="toggleMore('sp-more','sp-arr','sp-lbl')"><span id="sp-arr">></span> <span id="sp-lbl">More details</span></button>
+        <div class="more-panel" id="sp-more">
+          <div class="more-row"><span class="mr-l">Equipment</span><span class="mr-r">Customer must provide pressure washer. Please confirm before booking.</span></div>
+          <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
+          <div class="more-row"><span class="mr-l">Cancellation</span><span class="mr-r">Cancel anytime — no contracts, no fees.</span></div>
+          <div class="more-row"><span class="mr-l">Who am I?</span><span class="mr-r">A 13-year-old Tinley Park entrepreneur. I ride to every job by e-bike and take pride in doing the work right.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-foot">Final price confirmed after I see the job in person. Free quotes always available.</div>
+</div>
+
+<!-- CLEAN PAGE -->
+<div class="subpage" id="cleanPage">
+  <div class="subpage-nav">
+    <button class="back-btn" onclick="showMain()">← Back</button>
+    <div class="subpage-nav-logo">Cam Outdoor Services / <span>Clean by Cam</span></div>
+  </div>
+  <div class="sub-hero" style="background: linear-gradient(160deg, #e8f5e9, #f1f8e9);">
+    <div class="sub-tag">Year round</div>
+    <h2 class="sub-title">Clean by Cam</h2>
+    <p class="sub-desc">Garbage can cleaning so you never have to deal with the smell, the stains, or the mess. I handle all of it.</p>
+  </div>
+  <div class="est-wrap">
+    <div class="est-label">How many cans?</div>
+    <div class="size-row">
+      <div class="size-btn" onclick="pickSize('clean','small',this)"><div class="sz">1 can</div><div class="sd">Single bin cleaning</div></div>
+      <div class="size-btn" onclick="pickSize('clean','medium',this)"><div class="sz">2-3 cans</div><div class="sd">Small household set</div></div>
+      <div class="size-btn" onclick="pickSize('clean','large',this)"><div class="sz">4+ cans</div><div class="sd">Full household set</div></div>
+    </div>
+    <div class="result-box">
+      <div class="r-empty" id="cl-empty">Select number of cans to see your estimate.</div>
+      <div id="cl-result" style="display:none;">
+        <div class="r-brand">Clean by Cam</div>
+        <div class="r-sub">Garbage can cleaning · Year round</div>
+        <div class="r-price" id="cl-price"></div>
+        <div class="r-note">Includes scrubbing, rinsing, and deodorizing.</div>
+        <div class="r-neg">Prices are negotiable — just ask.</div>
+        <hr class="r-div">
+        <div class="r-grid">
+          <div class="r-item"><div class="r-item-label">Estimated time</div><div class="r-item-val" id="cl-time"></div></div>
+          <div class="r-item"><div class="r-item-label">Availability</div><div class="r-item-val">Year round</div></div>
+        </div>
+        <button class="more-btn" onclick="toggleMore('cl-more','cl-arr','cl-lbl')"><span id="cl-arr">></span> <span id="cl-lbl">More details</span></button>
+        <div class="more-panel" id="cl-more">
+          <div class="more-row"><span class="mr-l">What's included</span><span class="mr-r">Full scrub inside and out, rinse, and deodorize. Cans left fresh and clean.</span></div>
+          <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
+          <div class="more-row"><span class="mr-l">Cancellation</span><span class="mr-r">Cancel anytime — no contracts, no fees.</span></div>
+          <div class="more-row"><span class="mr-l">Who am I?</span><span class="mr-r">A 13-year-old Tinley Park entrepreneur. I ride to every job by e-bike and take pride in doing the work right.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-foot">Final price confirmed after I see the job in person. Free quotes always available.</div>
+</div>
+
+<!-- HAUL PAGE -->
+<div class="subpage" id="haulPage">
+  <div class="subpage-nav">
+    <button class="back-btn" onclick="showMain()">← Back</button>
+    <div class="subpage-nav-logo">Cam Outdoor Services / <span>Haul by Cam</span></div>
+  </div>
+  <div class="sub-hero" style="background: linear-gradient(160deg, #fbe9e7, #fdf0ec);">
+    <div class="sub-tag">Year round</div>
+    <h2 class="sub-title">Haul by Cam</h2>
+    <p class="sub-desc">Garage cleanouts. That space you've been putting off clearing for months — let's get it done. Big jobs may take a full day.</p>
+  </div>
+  <div class="est-wrap">
+    <div class="est-label">Choose garage size</div>
+    <div class="size-row">
+      <div class="size-btn" onclick="pickHaul('small',this)"><div class="sz">Small</div><div class="sd">Fairly empty, few items</div></div>
+      <div class="size-btn" onclick="pickHaul('medium',this)"><div class="sz">Medium</div><div class="sd">Half full garage</div></div>
+      <div class="size-btn" onclick="pickHaul('large',this)"><div class="sz">Large</div><div class="sd">Fully packed garage</div></div>
+    </div>
+    <div class="est-label">Add-ons</div>
+    <div class="addon-row" id="sprayAddon" onclick="toggleAddon()">
+      <div class="addon-check" id="addonCheck"></div>
+      <div class="addon-text">
+        <div class="addon-name">Pressure wash the garage floor</div>
+        <div class="addon-desc">After the cleanout, wash the floor down. Customer must provide pressure washer.</div>
+      </div>
+      <div class="addon-price">+$20</div>
+    </div>
+    <div class="result-box">
+      <div class="r-empty" id="h-empty">Select a garage size to see your estimate.</div>
+      <div id="h-result" style="display:none;">
+        <div class="r-brand">Haul by Cam</div>
+        <div class="r-sub">Garage cleanout · Year round</div>
+        <div class="r-price" id="h-price"></div>
+        <div class="r-addon-tag" id="h-addon-tag" style="display:none;">Includes pressure wash add-on (+$20)</div>
+        <div class="r-note">Includes sorting, moving, and hauling items out.</div>
+        <div class="r-neg">Prices are negotiable — just ask.</div>
+        <hr class="r-div">
+        <div class="r-grid">
+          <div class="r-item"><div class="r-item-label">Estimated time</div><div class="r-item-val" id="h-time"></div></div>
+          <div class="r-item"><div class="r-item-label">Availability</div><div class="r-item-val">Year round</div></div>
+        </div>
+        <button class="more-btn" onclick="toggleMore('h-more','h-arr','h-lbl')"><span id="h-arr">></span> <span id="h-lbl">More details</span></button>
+        <div class="more-panel" id="h-more">
+          <div class="more-row"><span class="mr-l">What's included</span><span class="mr-r">Sorting, moving, and hauling items out. You decide what stays and what goes.</span></div>
+          <div class="more-row"><span class="mr-l">Big jobs</span><span class="mr-r">Large cleanouts may take a full day. Scheduling in advance recommended.</span></div>
           <div class="more-row"><span class="mr-l">Payment</span><span class="mr-r">Cash or Apple Pay. Paid after the job is done.</span></div>
           <div class="more-row"><span class="mr-l">Cancellation</span><span class="mr-r">Cancel anytime — no contracts, no fees.</span></div>
           <div class="more-row"><span class="mr-l">Who am I?</span><span class="mr-r">A 13-year-old Tinley Park entrepreneur. I ride to every job by e-bike and take pride in doing the work right.</span></div>
@@ -470,16 +697,25 @@
 
 <script>
 const prices = {
-  summer: { small:[20,30], medium:[35,45], large:[50,65] },
-  fall:   { small:[25,40], medium:[45,65], large:[70,100] },
-  winter: { small:[20,30], medium:[30,45], large:[45,60] }
+  summer: { small:[20,30],  medium:[35,45],  large:[50,65]   },
+  fall:   { small:[25,40],  medium:[45,65],  large:[70,100]  },
+  winter: { small:[20,30],  medium:[30,45],  large:[45,60]   },
+  spray:  { small:[30,50],  medium:[55,80],  large:[85,120]  },
+  clean:  { small:[15,20],  medium:[30,45],  large:[50,70]   },
 };
 const times = {
   summer: { small:'30-45 min', medium:'45-60 min', large:'60-90 min' },
-  fall:   { small:'45-60 min', medium:'1-2 hrs', large:'2-3 hrs' },
-  winter: { small:'20-30 min', medium:'30-45 min', large:'45-60 min' }
+  fall:   { small:'45-60 min', medium:'1-2 hrs',   large:'2-3 hrs'  },
+  winter: { small:'20-30 min', medium:'30-45 min', large:'45-60 min'},
+  spray:  { small:'30-45 min', medium:'1-2 hrs',   large:'2-3 hrs'  },
+  clean:  { small:'20-30 min', medium:'30-45 min', large:'45-60 min'},
 };
-const prefix = { summer:'s', fall:'f', winter:'w' };
+const haulPrices = { small:[60,90], medium:[100,150], large:[175,250] };
+const haulTimes  = { small:'2-3 hrs', medium:'4-5 hrs', large:'7-8 hrs' };
+const prefix = { summer:'s', fall:'f', winter:'w', spray:'sp', clean:'cl' };
+
+let haulSize = null;
+let addonActive = false;
 
 function showSub(season) {
   document.getElementById('mainSite').classList.add('hidden');
@@ -501,6 +737,29 @@ function pickSize(season, size, el) {
   document.getElementById(p+'-result').style.display = 'block';
   document.getElementById(p+'-price').textContent = '$'+lo+' - $'+hi;
   document.getElementById(p+'-time').textContent = times[season][size];
+}
+function pickHaul(size, el) {
+  el.closest('.size-row').querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  haulSize = size;
+  updateHaul();
+}
+function toggleAddon() {
+  addonActive = !addonActive;
+  document.getElementById('sprayAddon').classList.toggle('active', addonActive);
+  document.getElementById('addonCheck').textContent = addonActive ? 'x' : '';
+  updateHaul();
+}
+function updateHaul() {
+  if (!haulSize) return;
+  const [lo,hi] = haulPrices[haulSize];
+  const finalLo = addonActive ? lo+20 : lo;
+  const finalHi = addonActive ? hi+20 : hi;
+  document.getElementById('h-empty').style.display = 'none';
+  document.getElementById('h-result').style.display = 'block';
+  document.getElementById('h-price').textContent = '$'+finalLo+' - $'+finalHi;
+  document.getElementById('h-time').textContent = haulTimes[haulSize];
+  document.getElementById('h-addon-tag').style.display = addonActive ? 'block' : 'none';
 }
 function toggleMore(panelId, arrId, lblId) {
   const open = document.getElementById(panelId).classList.toggle('open');
